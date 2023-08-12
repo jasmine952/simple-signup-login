@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Signup</title>
+	<meta charset="utf-8">
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/water.css@2/out/dark.min.css"> 
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" />
+	<script src="https://unpkg.com/just-validate@latest/dist/just-validate.production.min.js" defer></script>
+	<script src="/js/validation.js" defer></script>
+	<style>
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background-color: #333;
+}
+
+li {
+  float: left;
+}
+
+li a {
+  display: block;
+  color: white;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+
+li a:hover {
+  background-color: #111;
+}
+<style>
+  .fas.fa-key {
+    font-size: 1px;
+    color: white;
+  }
+</style>
+
+</style>
+
+</head>
+
+<body>
+	<ul>
+	  <li><a class="active" href="index.php">Home</a></li>
+	  <li><a href="#news">News</a></li>
+	  <li><a href="#contact">Contact</a></li>
+	  <li><a href="#about">About</a></li>
+	   <li><a href="login.phps">Login</a></li>
+    </ul>
+	
+	<h1>Signup</h1>
+
+	<form action="process-signup.php" method="post" id="signup" novalidate>
+		<div>
+			<span class="fas fa-user"></span>
+			<label for="name">Name</label>
+			<input type="text" placeholder="Enter your full name" name="name" id="name" data-validate-required>
+		</div>
+		<div>
+			<span class="fas fa-envelope"></span>
+			<label for="email">Email</label>
+			<input type="email" placeholder="Email" name="email" id="email" data-validate-required data-validate-email>
+		</div>
+		<div>
+			<span class="fas fa-key"></span>
+			<label for="password">Password</label>
+			<input type="password" placeholder="Enter password" name="password" id="password" data-validate-required>
+		</div>
+
+		<div>
+			<span class="fas fa-key"></span>
+			<label for="password_confirmation">Repeat Password</label>
+			<input type="password" placeholder="Repeat password" name="password_confirmation" id="password_confirmation" data-validate-required data-validate-equals="#password">
+		</div>
+		<button type="submit">Signup</button>
+	</form>
+</body>
+
+</html>
